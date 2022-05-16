@@ -1,0 +1,29 @@
+.simplify{
+    width: 100%;
+    background-color: $bright-red;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:20px;
+    height: 150px;
+    h1 {
+        font-size: 24px;
+    }
+}
+
+.simplify-btn{
+    color:$dark-blue;
+    padding:0.5rem 1.5rem;
+}
+
+
+
+@media (min-width:768px) {
+    .simplify{
+        padding:40px;
+        h1{
+            font-size: 32px;
+        }
+    }
+}
