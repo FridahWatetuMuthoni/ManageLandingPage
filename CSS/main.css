@@ -26,16 +26,16 @@ img {
 
 body {
   width: 100%;
-  font-family: 'Be Vietnam', sans-serif;
+  font-family: "Be Vietnam", sans-serif;
   font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #242d52;
+  color: hsl(228, 39%, 23%);
 }
 
 p {
-  color: #9095a7;
+  color: hsl(227, 12%, 61%);
 }
 
 .container {
@@ -56,7 +56,6 @@ p {
     padding: 1rem 1.5rem;
   }
 }
-
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -79,16 +78,13 @@ p {
   grid-gap: 30px;
   line-height: 1.6;
 }
-
 .hero-info h1 {
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1.3;
 }
-
 .hero-info h1 span {
   display: block;
 }
-
 .hero-info p {
   padding: 20px 0;
   max-width: 500px;
@@ -108,13 +104,19 @@ p {
     padding: 20px 0;
   }
 }
-
+@media (min-width: 992px) {
+  .hero-info h1 {
+    font-size: 40px;
+  }
+  .hero-info h1 span {
+    display: block;
+  }
+}
 @media (min-width: 1140px) {
   .hero-info {
     padding: 100px 80px 50px 80px;
   }
 }
-
 .nav {
   width: 100%;
   padding: 30px;
@@ -131,11 +133,10 @@ p {
   display: flex;
   align-items: center;
 }
-
 .links a {
   display: block;
   padding: 1rem;
-  color: #242d52;
+  color: hsl(228, 39%, 23%);
   font-size: 16px;
 }
 
@@ -144,8 +145,8 @@ p {
 }
 
 .hero-btn {
-  box-shadow: 2px 2px 5px #f25f3a;
-  background-color: #f25f3a;
+  box-shadow: 2px 2px 5px hsl(12, 88%, 59%);
+  background-color: hsl(12, 88%, 59%);
   transition: 0.4s;
 }
 
@@ -157,13 +158,27 @@ p {
   position: absolute;
   width: 100%;
   top: 80px;
-  left: -100000px;
+  left: -1000000px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: ease-in-out;
 }
 
-.close {
+.mobile {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+
+#close,
+#open {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+#close {
   display: none;
 }
 
@@ -176,21 +191,19 @@ p {
   justify-content: center;
   padding: 30px;
 }
-
 .menu ul {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-
 .menu ul a {
   display: block;
   padding: 1.3rem;
-  color: #9095a7;
+  color: hsl(227, 12%, 61%);
 }
 
-.change .mobile-menu {
+.change {
   left: 0;
 }
 
@@ -201,20 +214,19 @@ p {
   .desktop {
     display: flex;
   }
-  .mobile {
+  .mobile,
+  .mobile-menu {
     display: none;
   }
   .links a {
     padding: 1rem 0.5rem;
   }
 }
-
 @media (min-width: 900px) {
   .links a {
     padding: 1rem;
   }
 }
-
 .about {
   width: 100%;
   min-height: 100vh;
@@ -237,7 +249,6 @@ p {
 .about-info h1 {
   margin-bottom: 20px;
 }
-
 .about-info p {
   line-height: 1.6;
 }
@@ -256,8 +267,8 @@ p {
   display: block;
   margin: 20px 20px 0 0;
   border: none;
-  background: #f25f3a;
-  box-shadow: 1px 1px 3px #f25f3a;
+  background: hsl(12, 88%, 59%);
+  box-shadow: 1px 1px 3px hsl(12, 88%, 59%);
   padding: 5px 5px;
   border-radius: 2rem;
   height: 30px;
@@ -271,7 +282,6 @@ p {
     height: 900px;
   }
 }
-
 @media (min-width: 768px) {
   .about {
     height: 820px;
@@ -288,13 +298,11 @@ p {
     margin: 20px;
   }
 }
-
 @media (min-width: 1120px) {
   .about {
     height: 650px;
   }
 }
-
 .testimonials {
   min-height: 100vh;
   width: 100%;
@@ -304,7 +312,6 @@ p {
   justify-content: center;
   flex-direction: column;
 }
-
 .testimonials .heading {
   text-align: center;
   padding: 20px;
@@ -325,23 +332,20 @@ p {
 }
 
 .card {
-  background-color: #f0eeee;
+  background-color: rgb(240, 238, 238);
   padding: 20px;
   max-width: 400px;
   height: 300px;
   border-radius: 5px;
   margin: 20px;
 }
-
 .card img {
   height: 80px;
   width: 80px;
 }
-
 .card h4 {
   padding: 10px 0;
 }
-
 .card p {
   font-size: 14px;
 }
@@ -352,23 +356,21 @@ p {
   }
   .card {
     max-width: 400px;
-    box-shadow: 1px 1px 3px #c2baba;
+    box-shadow: 1px 1px 3px rgb(194, 186, 186);
     height: 250px;
   }
   .cards {
     width: 80%;
   }
 }
-
 @media (min-width: 1100px) {
   .cards {
     width: 80%;
   }
 }
-
 .simplify {
   width: 100%;
-  background-color: #f25f3a;
+  background-color: hsl(12, 88%, 59%);
   color: white;
   display: flex;
   align-items: center;
@@ -376,13 +378,12 @@ p {
   padding: 20px;
   height: 150px;
 }
-
 .simplify h1 {
   font-size: 24px;
 }
 
 .simplify-btn {
-  color: #242d52;
+  color: hsl(228, 39%, 23%);
   padding: 0.5rem 1.5rem;
 }
 
@@ -394,13 +395,12 @@ p {
     font-size: 32px;
   }
 }
-
 .footer {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #242d52;
+  background-color: hsl(228, 39%, 23%);
   flex-direction: column;
   color: white;
   padding: 20px;
@@ -413,11 +413,10 @@ p {
   border-radius: 20px;
   padding: 5px 8px;
 }
-
 .form button {
   border: none;
   color: white;
-  background-color: #f25f3a;
+  background-color: hsl(12, 88%, 59%);
   padding: 5px 15px;
   border-radius: 20px;
   margin-left: 5px;
@@ -439,11 +438,11 @@ p {
   flex-direction: column;
   margin: 0 30px;
 }
-
 .links-one a {
   display: block;
   padding: 5px;
   color: white;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -451,4 +450,16 @@ p {
     flex-direction: row;
   }
 }
-/*# sourceMappingURL=main.css.map */
+p {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=main.css.map */

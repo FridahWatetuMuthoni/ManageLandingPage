@@ -1,23 +1,19 @@
-const nav = document.getElementById('nav');
+const menu = document.getElementById("menu");
+const open = document.getElementById("open");
+const close = document.getElementById("close");
 
-const open = document.getElementById('open');
-const close = document.getElementById('close');
+open.addEventListener("click", handleOpen);
+close.addEventListener("click", CloseMenu);
+menu.addEventListener("click", CloseMenu);
 
-open.addEventListener('click', handleOpen);
-close.addEventListener('click', handleClose);
-nav.addEventListener("click", handleClick);
-
-
-function handleOpen(){
-    close.style.display="block"
-    open.style.display="none"
+function handleOpen() {
+  open.style.display = "none";
+  close.style.display = "block";
+  menu.style.left = "0";
 }
 
-function handleClose(){
-    close.style.display="none"
-    open.style.display='block'
-}
-
-function handleClick() {
-    nav.classList.toggle('change')
+function CloseMenu() {
+  close.style.display = "none";
+  open.style.display = "inline-block";
+  menu.style.left = "-100000px";
 }
